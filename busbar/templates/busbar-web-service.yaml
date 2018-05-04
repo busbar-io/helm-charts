@@ -8,26 +8,16 @@ metadata:
     release: "{{ .Release.Name }}"
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     heritage: "{{ .Release.Service }}"
-{{ if eq "busbar.name" "minikube" }}
-{{ else }}
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
-{{ end }}
 spec:
   selector:
     app: {{ template "busbar.name" . }}
     component: web
     release: "{{ .Release.Name }}"
-{{ if eq "busbar.name" "minikube" }}
-  type: NodePort
-  ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 8080
-{{ else }}
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
-{{ end }}
+
 

@@ -6,19 +6,11 @@ A [Busbar](https://github.com/busbar-io/busbar-server) Chart for Kubernetes.
 
 Busbar will set up a Busbar API Server, a MongoDB pod, a Redis pod and a Private Docker Registry.
 
-If installed without parameters it will setup a development/minikube version of the system.
-
-In order for Busbar and the Private Docker Registry to work properly in a production environment you must to set up your private DNS zone and a S3 bucket/user to host your private Docker registry.
+In order for Busbar and the Private Docker Registry to work properly you must to set up your private DNS zone and a S3 bucket/user to host your private Docker registry.
 
 To find complete instructions please refer to the Busbar oficial documentation at [Busbar](https://github.com/busbar-io/busbar-server).
 
-To install the Busbar Chart on a MiniKube kubernetes cluster, run the following command:
-
-```bash
-helm install busbar
-```
-
-To install the Busbar Chart on your production/staging system, run the following command (the options bellow are mandatory):
+To install the Busbar Chart on your system, run the following command (the options bellow are mandatory):
 
 ```bash
 helm install busbar \
@@ -42,7 +34,7 @@ helm install busbar \
 | `image.kubeconfig.repository`     | KubeConfig Docker registry/Image               | 127.0.0.1:5000/kubeconfig         |
 | `image.kubeconfig.tag`            | KubeConfig Image tag to use on installation    | latest                            |
 | `image.kubeconfig.pullPolicy`     | KubeConfig Image pull policy                   | Always                            |
-| `clusterName`                     | Kubernetes Cluster Name                        | minikube                          |
+| `clusterName`                     | Kubernetes Cluster Name                        | busbar_cluster                    |
 | `privateDomainName`               | Private Domain Name                            | private                           |
 | `publicDomainName`                | Public Domain Name                             | example.com                       |
 | `kubeRegistry.storageS3Accesskey` | Private Registry S3 Bucket Access Key          | my_private_registry_s3_access_key |

@@ -17,7 +17,7 @@ image:
     pullPolicy: Always
 
 ## Cluster Name
-clusterName: minikube
+clusterName: busbar_cluster
 privateDomainName: private
 publicDomainName: example.com
 
