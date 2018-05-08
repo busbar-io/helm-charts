@@ -1,4 +1,4 @@
-name: busbar
+name: busbar-minikube
 version: 0.0.1
 appVersion: 1.9.1
 description: A tool to build, deploy and control applications running on a Kubernetes cluster.

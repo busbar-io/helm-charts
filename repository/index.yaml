@@ -1,0 +1,26 @@
+apiVersion: v1
+entries:
+  busbar-minikube:
+  - appVersion: 1.9.1
+    created: 2018-05-08T19:27:18.539538756-03:00
+    description: A tool to build, deploy and control applications running on a Kubernetes
+      cluster.
+    digest: c4d3b874794e48027e148d36ea4e6ef3ab9f1488e63fb0fa054904f253cab675
+    engine: gotpl
+    home: https://busbar.io
+    keywords:
+    - application hosting
+    maintainers:
+    - email: maintainers@busbar.io
+      name: busbar-io
+    - email: leon@waldman.io
+      name: waldman
+    - email: markgergely@me.com
+      name: markgergely
+    name: busbar-minikube
+    sources:
+    - https://github.com/busbar-io/busbar-server
+    urls:
+    - busbar-minikube-0.0.1.tgz
+    version: 0.0.1
+generated: 2018-05-08T19:27:18.537443222-03:00
