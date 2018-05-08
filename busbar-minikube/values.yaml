@@ -1,0 +1,46 @@
+## Busbar default Values
+##
+
+## Images
+image:
+  busbar:
+    repository: busbario/busbar
+    tag: latest
+    pullPolicy: Always
+  kubeconfig:
+    repository: 127.0.0.1:5000/kubeconfig
+    tag: latest
+    pullPolicy: Always
+
+## Cluster Values
+clusterName: minikube
+privateDomainName: private
+publicDomainName: example.com
+minikubeIp: <minikube-ip>
+
+## Configure resource requests and limits
+## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+##
+busbar:
+  web:
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+
+  worker:
+    resources:
+      requests:
+        cpu: 400m
+        memory: 256Mi
+
+kubeconfig:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+## Dependencies
+## Redis
+redis:
+  usePassword: false

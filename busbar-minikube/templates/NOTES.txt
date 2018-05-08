@@ -1,0 +1,7 @@
+---
+busbar_api_url: http://{{ .Values.minikubeIp }}:8000
+default_git_branch: master
+kubectl_config_url: http://{{ .Values.minikubeIp }}:8001/kubeconfig
+kubectl_config_version_url: http://{{ .Values.minikubeIp }}:8001/version.txt
+busbar_profile: {{ .Values.clusterName }}
+
